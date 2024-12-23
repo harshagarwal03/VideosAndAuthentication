@@ -1,0 +1,21 @@
+.home {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .auth-links {
+    margin-top: 2rem;
+  }
+  
+  .auth-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .auth-links a:hover {
+    background-color: #555;
+  }

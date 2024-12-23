@@ -1,0 +1,23 @@
+/* Video page styles */
+.video-page {
+  padding: 2rem;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.video-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 2rem);
+}
+
+.video-item video {
+  width: 100%;
+  border-radius: 5px;
+}
