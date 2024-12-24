@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/Home.css';
+import React from "react";
+import "../assets/Home.css";
 
 const Home = () => {
   return (
@@ -8,6 +8,6 @@ const Home = () => {
       <p>Watch and upload your favorite videos.</p>
     </div>
   );
-}
+};
 
 export default Home;

@@ -8,6 +8,16 @@ const UploadPage = () => {
   const [file, setFile] = useState(null);
   const [uploadProgress, setUploadProgress] = useState(0);
 
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile && selectedFile.type === "video/mp4") {
+      setFile(selectedFile);
+    } else {
+      alert("Only MP4 files are allowed!");
+      e.target.value = null;
+    }
+  };
+
   const handleUpload = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -50,7 +60,7 @@ const UploadPage = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+        <input type="file" onChange={handleFileChange} />
         <button type="submit">Upload</button>
         {uploadProgress > 0 && <p>Uploading: {uploadProgress}%</p>}
       </form>

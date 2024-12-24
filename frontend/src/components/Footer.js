@@ -1,5 +1,5 @@
-import React from 'react';
-import '../assets/Footer.css';
+import React from "react";
+import "../assets/Footer.css";
 
 const Footer = () => {
   return (
@@ -7,6 +7,6 @@ const Footer = () => {
       <p>&copy; 2023 Video App. All rights reserved.</p>
     </footer>
   );
-}
+};
 
 export default Footer;

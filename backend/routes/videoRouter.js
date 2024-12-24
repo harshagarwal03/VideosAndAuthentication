@@ -1,12 +1,9 @@
 const express = require("express");
-const { getAllVideos } = require("../controllers/videoController");
-// const { videoUpload } = require('../middleware/videoUpload');
 const router = express.Router();
 const videoController = require("../controllers/videoController");
-const multer = require("multer");
-const upload = multer({ dest: "" });
+const { videoUpload } = require("../middleware/videoMiddleware");
 
-router.post("/upload", upload.single("video"), videoController.addVideo);
-router.get("/videos", getAllVideos);
+router.post("/upload", videoUpload.single("video"), videoController.addVideo);
+router.get("/videos", videoController.getAllVideos);
 
 module.exports = router;

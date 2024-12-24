@@ -27,7 +27,7 @@ const VideoPage = () => {
             <h3>{video.title}</h3>
             <p>{video.description}</p>
             <video width="400" controls>
-              <source src={`/videos/${video.filename}`} type="video/mp4" />
+              <source src={`http://localhost:8000/api/videos/${video._id}`} />
               Your browser does not support the video tag.
             </video>
           </div>
